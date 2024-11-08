@@ -83,7 +83,7 @@ class EDA:
         figure.add_trace(go.Scatter(x=self.data2.index,y=self.data2[column],name= 'Vanguard index bonds'),row=2,col=1)
         figure.add_trace(go.Scatter(x=self.data3.index,y=self.data3[column],name='S&P 500'),row=3,col=1)
         #Customize the layout 
-        figure.update_layout(height=700, width=950,title=f'The {column} of all 3 stocks across the years')
+        figure.update_layout(height=600, width=950,title=f'The {column} of all 3 stocks across the years')
         figure.show()
     def outlier_detection(self):
         """
@@ -120,5 +120,5 @@ class EDA:
         fig.add_trace(go.Scatter(x=decomposition.resid.index, y=decomposition.resid), row=4, col=1)
 
         #Customize the layout and appearance
-        fig.update_layout(height=900, title=f'Seasonal Decomposition for the Closing stock price of {symbol}',  title_x=0.5, showlegend=False)
+        fig.update_layout(height=600, title=f'Seasonal Decomposition for the Closing stock price of {symbol}',  title_x=0.5, showlegend=False)
         fig.show()
